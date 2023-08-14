@@ -14,7 +14,7 @@ def open_and_check_page(url):
     driver.get(url)
     file=codecs.open('all_urls.txt', 'a+')
     file.write(url +"\n")
-    file.close()
+    file.close() 
     time.sleep(1)  # Wait for page to load
     element = driver.find_elements(By.XPATH, '//*[contains(text(),"calme")]')
     if element:
